@@ -1,0 +1,153 @@
+aid: cargowise
+url: https://raw.githubusercontent.com/api-evangelist/cargowise/refs/heads/main/apis.yml
+name: CargoWise
+kind: company
+description: >-
+  CargoWise is WiseTech Global's logistics execution platform - a single-database
+  ERP for international freight forwarding, customs, warehousing, transport, and
+  landside logistics. Its integration surface is delivered primarily through
+  eAdaptor, which pairs a RESTful XML inbound service (push, query, add, and update
+  records) with a SOAP-based outbound service (a webhook equivalent that emits
+  messages on milestones). Payloads use CargoWise's Universal XML schemas -
+  Universal Shipment (XUS), Universal Event (XUE), and Universal Transaction - or
+  the legacy Native XML format. Newer REST integration (eAdaptor Next / xHub) adds
+  OAuth 2.0 authorization-code access. The integration API is real but heavily
+  gated - the eAdaptor Developers Guide and endpoint details are released only
+  after a customer purchases the eAdaptor modules, and partner access runs through
+  WiseTech accreditation and certification. Endpoints below are modeled from public
+  developer references; the authoritative specification is not publicly published.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Logistics
+- Freight Forwarding
+- Supply Chain
+- Customs
+- Shipping
+- eAdaptor
+- Universal XML
+- EDI
+- WiseTech Global
+created: '2026-07-05'
+modified: '2026-07-05'
+specificationVersion: '0.19'
+apis:
+- aid: cargowise:cargowise-eadaptor-inbound-api
+  name: CargoWise eAdaptor Inbound API
+  tags:
+  - eAdaptor
+  - Inbound
+  - Universal XML
+  - Ingestion
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://wisetechacademy.com/explore/product-learning/
+  description: >-
+    The eAdaptor Inbound Service is a RESTful XML interface for pushing data into
+    a CargoWise (CW1) instance and querying records. A single inbound endpoint
+    accepts a Universal XML or Native XML payload; the XML determines whether the
+    request queries, adds, or updates records. Endpoints are per-tenant and gated
+    behind the eAdaptor module purchase, so paths below are modeled from public
+    developer references rather than a published specification.
+  properties:
+  - url: https://wisetechacademy.com/explore/product-learning/
+    type: Documentation
+  - url: https://www.scribd.com/document/725844299/eAdaptorDevelopersGuide-11-March-2024
+    type: DeveloperGuide
+- aid: cargowise:cargowise-eadaptor-outbound-api
+  name: CargoWise eAdaptor Outbound API
+  tags:
+  - eAdaptor
+  - Outbound
+  - Webhooks
+  - SOAP
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://wisetechacademy.com/explore/product-learning/
+  description: >-
+    The eAdaptor Outbound Service is the webhook equivalent - CargoWise emits
+    messages to a listening SOAP service when configured Workflow Template
+    milestones or triggers fire. Actions are set to XUS (full Universal Shipment
+    detail) or XUE (minimal Universal Event detail) with the recipient set to the
+    Organization Proxy (ORP). The reference open-source client exposes the SOAP
+    operations Ping, SendStream, and the deprecated ProcessStream against an
+    eAdapterStreamedService.wsdl endpoint. Only one outbound SOAP URL can be
+    configured per CargoWise instance. Endpoints are modeled from public
+    references.
+  properties:
+  - url: https://www.complect.io/docs/cargowise-integrations/cargowise-eadaptor/workflow-templates/
+    type: Documentation
+  - url: https://github.com/SteeleConsulting/cargowise-eadapter
+    type: SourceCode
+- aid: cargowise:cargowise-universal-shipment-api
+  name: CargoWise Universal Shipment API
+  tags:
+  - Universal Shipment
+  - XUS
+  - Forwarding
+  - Customs
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.scribd.com/document/725844283/Universal-XML-Universal-Activity-Module-Mapping-Guide
+  description: >-
+    The Universal Shipment (XUS) message is CargoWise's canonical XML model for a
+    full logistics record - forwarding shipment, customs declaration, warehouse
+    order, transport leg, and the associated organizations, packing lines, and
+    charges. It is carried over eAdaptor inbound (to create or update) and
+    outbound (to notify), wrapped in a UniversalInterchange envelope. The schema
+    is documented in the Universal XML Mapping Guide; the runtime endpoints are
+    the eAdaptor services and are gated per tenant.
+  properties:
+  - url: https://www.scribd.com/document/725844283/Universal-XML-Universal-Activity-Module-Mapping-Guide
+    type: DeveloperGuide
+- aid: cargowise:cargowise-universal-event-api
+  name: CargoWise Universal Event API
+  tags:
+  - Universal Event
+  - XUE
+  - Tracking
+  - Milestones
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.complect.io/docs/cargowise-integrations/cargowise-eadaptor/workflow-templates/
+  description: >-
+    The Universal Event (XUE) message carries a minimal record identifier plus the
+    event or milestone responsible for a notification - the basis for tracking and
+    status integrations. XUE messages are emitted by the eAdaptor Outbound Service
+    when a Workflow Template milestone completes, and can also be posted inbound to
+    raise events against a record. Endpoints are the shared eAdaptor services and
+    are modeled from public references.
+  properties:
+  - url: https://www.complect.io/docs/cargowise-integrations/cargowise-eadaptor/workflow-templates/
+    type: Documentation
+- aid: cargowise:cargowise-rest-integration-api
+  name: CargoWise REST Integration API
+  tags:
+  - REST
+  - OAuth 2.0
+  - xHub
+  - eAdaptor Next
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.cargowise.com/partners/become-a-partner/
+  description: >-
+    WiseTech's newer integration path (referred to as eAdaptor Next and xHub) adds
+    REST access authenticated with OAuth 2.0 authorization-code flow, where a
+    registered application receives a client ID and secret to mint access tokens.
+    eAdaptor Next is positioned to fully replace SOAP for both inbound and outbound
+    communication, adding traceability, multi-system support, and richer
+    messaging. Access is partner-gated through WiseTech accreditation; no public
+    REST reference is published, so any resource paths are modeled.
+  properties:
+  - url: https://www.cargowise.com/partners/become-a-partner/
+    type: Documentation
+common:
+- type: LinkedIn
+  url: https://www.linkedin.com/company/wisetech-global
+- type: Website
+  url: https://www.cargowise.com/
+- type: Documentation
+  url: https://wisetechacademy.com/explore/product-learning/
+- type: Partners
+  url: https://www.cargowise.com/partners/become-a-partner/
+- type: Pricing
+  url: https://www.cargowise.com/lp/cargowise-value-pack/
+- type: Company
+  url: https://www.wisetechglobal.com/
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

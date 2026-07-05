@@ -1,0 +1,106 @@
+aid: cargowise
+name: CargoWise
+review:
+  question: Does CargoWise expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-05'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was authored. CargoWise's asynchronous behavior is
+    delivered by the eAdaptor Outbound Service, which POSTs Universal XML
+    messages (XUS/XUE) to a single customer-configured listening SOAP service
+    when Workflow Template milestones fire. That is server-to-endpoint SOAP over
+    HTTP - a webhook equivalent - not a WebSocket, SSE, or broker stream. There
+    is also no publicly published event schema or channel definition to model,
+    because eAdaptor documentation is released only after a customer purchases
+    the eAdaptor modules. Any AsyncAPI document would therefore be fabricated
+    rather than sourced, so none was created.
+findings:
+  summary: |
+    CargoWise does not publish a documented public WebSocket API. CargoWise is
+    WiseTech Global's single-database logistics execution platform (freight
+    forwarding, customs, warehousing, transport). Its integration surface is
+    real but gated. The primary path is eAdaptor: an inbound RESTful XML service
+    (a single endpoint whose XML payload decides query/add/update) and an
+    outbound SOAP service (a webhook equivalent, one listener URL per instance).
+    Payloads use CargoWise's Universal XML schemas - Universal Shipment (XUS),
+    Universal Event (XUE), and Universal Transaction - or the legacy Native XML
+    format, wrapped in a UniversalInterchange envelope. A newer REST path
+    (eAdaptor Next / xHub) adds OAuth 2.0 authorization-code access and is
+    positioned to replace SOAP. No WebSocket (ws:// or wss://) endpoint is
+    documented anywhere in the public developer references.
+  accessModel: |
+    Gated. The eAdaptor Developers Guide and the actual per-tenant endpoints are
+    not made available until a CargoWise customer purchases the eAdaptor modules
+    for their instance. Partner/integrator access runs through WiseTech
+    accreditation and certification. There is no open, self-serve public API
+    reference or sandbox. Behavior can also differ between CargoWise instances
+    based on each client's configuration.
+  endpointsModeled: true
+  endpointsModeledNote: |
+    Because the authoritative eAdaptor specification is gated, the APIs in
+    apis.yml are modeled from public developer references (open-source eAdaptor
+    clients, integrator documentation, and product sheets), not from a published
+    CargoWise specification. Concrete, publicly attested facts include the SOAP
+    operations Ping / SendStream / ProcessStream (deprecated) exposed against an
+    eAdapterStreamedService.wsdl endpoint, the XUS and XUE action codes, the ORP
+    (Organization Proxy) recipient, and the Universal vs Native XML formats.
+    Host and path are per-tenant and are not reproduced as if canonical.
+  transports:
+    - protocol: REST/XML
+      scheme: https
+      documented: partial
+      note: eAdaptor Inbound Service - single endpoint accepting Universal or Native XML to query, add, or update records. Per-tenant host, gated behind module purchase.
+    - protocol: SOAP
+      scheme: https
+      documented: partial
+      note: eAdaptor Outbound Service (webhook equivalent) and the eAdapterStreamedService.wsdl streamed service exposing Ping / SendStream / ProcessStream. One outbound listener URL per instance.
+    - protocol: REST
+      scheme: https
+      documented: partial
+      note: eAdaptor Next / xHub REST path authenticated with OAuth 2.0 authorization-code flow (client ID + secret). Partner-gated; no public reference.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint is documented in any public CargoWise, WiseTech, or eAdaptor developer reference as of the review date.
+sources:
+  - url: https://www.cargowise.com/
+    type: Website
+    note: CargoWise product site - WiseTech Global logistics execution platform.
+  - url: https://wisetechacademy.com/explore/product-learning/
+    type: Documentation
+    note: WiseTech Academy product learning and certification portal; eAdaptor/xHub guidance surfaced here to customers.
+  - url: https://www.complect.io/docs/cargowise-integrations/
+    type: Documentation
+    note: Integrator docs - eAdaptor inbound RESTful XML, outbound SOAP webhook equivalent, single-listener limitation.
+  - url: https://www.complect.io/docs/cargowise-integrations/cargowise-eadaptor/workflow-templates/
+    type: Documentation
+    note: XUS vs XUE action codes, ORP (Organization Proxy) recipient, Workflow Template milestone triggers.
+  - url: https://github.com/SteeleConsulting/cargowise-eadapter
+    type: SourceCode
+    note: Open-source eAdaptor client - eAdapterStreamedService.wsdl with Ping / SendStream / ProcessStream, Universal vs Native XML, UniversalInterchange/UniversalShipment.
+  - url: https://www.scribd.com/document/725844299/eAdaptorDevelopersGuide-11-March-2024
+    type: DeveloperGuide
+    note: eAdaptor Developers Guide (gated distribution) - inbound/outbound service definitions.
+  - url: https://www.scribd.com/document/725844283/Universal-XML-Universal-Activity-Module-Mapping-Guide
+    type: DeveloperGuide
+    note: Universal XML mapping guide - Universal Shipment/Activity schema mapping.
+  - url: https://www.cargowise.com/partners/become-a-partner/
+    type: Documentation
+    note: Partner accreditation and certification path - how integrator API access is gated.
+  - url: https://www.cargowise.com/lp/cargowise-value-pack/
+    type: Pricing
+    note: Value Pack model - transaction-based pricing bundling core API/EDI; enterprise contact-sales, no public price list.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No WebSocket protocol surface exists. CargoWise's asynchronous delivery is a
+    SOAP webhook (eAdaptor Outbound Service) to a single per-tenant listener, and
+    its inbound surface is RESTful XML - both gated behind module purchase and
+    partner certification. No AsyncAPI document was created because there is no
+    documented server-push streaming transport and no publicly published event
+    schema to model without fabrication. apis.yml captures the eAdaptor inbound,
+    eAdaptor outbound, Universal Shipment, Universal Event, and REST (eAdaptor
+    Next / xHub) surfaces with endpointsModeled noted.
