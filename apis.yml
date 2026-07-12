@@ -136,6 +136,10 @@ apis:
   - url: https://www.cargowise.com/partners/become-a-partner/
     type: Documentation
 common:
+- type: VulnerabilityDisclosure
+  url: security/cargowise-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/cargowise-domain-security.yml
 - type: LinkedIn
   url: https://www.linkedin.com/company/wisetech-global
 - type: Website
