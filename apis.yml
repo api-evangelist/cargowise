@@ -16,7 +16,18 @@ description: >-
   after a customer purchases the eAdaptor modules, and partner access runs through
   WiseTech accreditation and certification. Endpoints below are modeled from public
   developer references; the authoritative specification is not publicly published.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/cargowise.png
 tags:
 - Logistics
 - Freight Forwarding
