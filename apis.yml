@@ -68,6 +68,11 @@ apis:
   tags:
   - eAdaptor
   - Outbound
+  - Webhook
+  - SOAP
+  tags_raw:
+  - eAdaptor
+  - Outbound
   - Webhooks
   - SOAP
   image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
@@ -129,6 +134,11 @@ apis:
 - aid: cargowise:cargowise-rest-integration-api
   name: CargoWise REST Integration API
   tags:
+  - REST
+  - Authentication
+  - xHub
+  - eAdaptor Next
+  tags_raw:
   - REST
   - OAuth 2.0
   - xHub
