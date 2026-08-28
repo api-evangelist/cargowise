@@ -16,6 +16,18 @@ description: >-
   after a customer purchases the eAdaptor modules, and partner access runs through
   WiseTech accreditation and certification. Endpoints below are modeled from public
   developer references; the authoritative specification is not publicly published.
+deliveryModel:
+  model: unknown
+  open_source: unknown
+  commercial: true
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - pricing
+  - repository-unlicensed
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
