@@ -1,0 +1,9 @@
+name: CargoWise rate limits
+generated: '2026-10-20'
+method: none
+limit_count: 0
+limits: []
+note: >-
+  No published rate limits. The eAdaptor Developers Guide and eAdaptor Next / REST documentation are released
+  only to licensed customers and accredited partners (myaccount.cargowise.com / WiseTech Academy); no public
+  page states request limits or rate-limit headers.

@@ -1,0 +1,21 @@
+generated: '2026-10-20'
+method: none
+source: https://www.npmjs.com/package/cargowise
+note: 'no first-party package: every candidate a model listed was unowned (harvest-packages.py --audit)'
+packages: []
+rejected:
+- name: cargowise
+  registry: npm
+  reason: 'official: false as written'
+- name: CargoWiseReplicationAPIInterface
+  registry: nuget
+  reason: 'official: false as written'
+- name: CargoWiseReplicationAPIInterface.Serialization
+  registry: nuget
+  reason: 'official: false as written'
+- name: CargoWiseNetLibrary
+  registry: nuget
+  reason: 'official: false as written'
+- name: oliverbj/cord
+  registry: packagist
+  reason: 'official: false as written'

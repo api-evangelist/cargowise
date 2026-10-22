@@ -1,0 +1,169 @@
+generated: '2026-10-20'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 14
+  own: 4
+  other_domain: 8
+  platform: 2
+  roles:
+  - api
+  - docs
+  - identity
+  - legal
+  - other
+  - source
+  - website
+hosts:
+- host: api.cargowise.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: cargowise.com
+  role: api
+  relation: own
+- host: api.complect.io
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: complect.io
+  role: api
+  relation: other-domain
+- host: api.scribd.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: scribd.com
+  role: api
+  relation: other-domain
+- host: api.wisetechacademy.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: wisetechacademy.com
+  role: api
+  relation: other-domain
+- host: api.wisetechglobal.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: wisetechglobal.com
+  role: api
+  relation: other-domain
+- host: cargowise.com
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: cargowise.com
+  role: other
+  relation: own
+- host: github.com
+  found_by:
+  - pointer
+  types:
+  - GitHubOrganization
+  serves: []
+  registrable_domain: github.com
+  role: source
+  relation: platform
+- host: myaccount.cargowise.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - well-known
+  types:
+  - Login
+  serves: []
+  registrable_domain: cargowise.com
+  role: identity
+  relation: own
+- host: wisetechacademy.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - docs-index
+  - well-known
+  types:
+  - Documentation
+  serves:
+  - docs
+  registrable_domain: wisetechacademy.com
+  role: docs
+  relation: other-domain
+- host: www.cargowise.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - well-known
+  - vendor-detect
+  types:
+  - Newsroom
+  - Blog
+  - Website
+  - Partners
+  - Pricing
+  - Support
+  - Contact
+  serves:
+  - docs
+  - cdn
+  vendor: cloudflare
+  registrable_domain: cargowise.com
+  role: website
+  relation: own
+- host: www.complect.io
+  found_by:
+  - apis[]
+  - probed
+  - well-known
+  types: []
+  serves:
+  - docs
+  registrable_domain: complect.io
+  role: other
+  relation: other-domain
+- host: www.linkedin.com
+  found_by:
+  - pointer
+  types:
+  - LinkedIn
+  serves: []
+  registrable_domain: linkedin.com
+  role: other
+  relation: platform
+- host: www.scribd.com
+  found_by:
+  - apis[]
+  - probed
+  - well-known
+  types: []
+  serves:
+  - docs
+  registrable_domain: scribd.com
+  role: other
+  relation: other-domain
+- host: www.wisetechglobal.com
+  found_by:
+  - pointer
+  - probed
+  - well-known
+  types:
+  - TermsOfService
+  - PrivacyPolicy
+  - Company
+  serves: []
+  registrable_domain: wisetechglobal.com
+  role: legal
+  relation: other-domain

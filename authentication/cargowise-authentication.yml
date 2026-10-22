@@ -1,0 +1,26 @@
+generated: '2026-10-20'
+method: searched
+source: https://help.logixboard.com/en/articles/15888871-cargowise-eadaptor-next-migration
+docs: https://help.logixboard.com/en/articles/15888871-cargowise-eadaptor-next-migration
+note: >-
+  WiseTech publishes no public authentication reference; the eAdaptor Developers Guide is customer-gated.
+  The schemes below are as described by third-party integrators configuring a CargoWise EDI Client, not by
+  WiseTech itself.
+schemes:
+- name: eAdaptor Next inbound OAuth (OAU)
+  type: oauth2
+  description: >-
+    EDI Client Inbound tab "Authorization Type to OAU (OAuth Authentication)"; a Certificate Signing Request is
+    uploaded and a certificate "issued by WiseTech" is generated, and the integrator receives an "OAuth Authority
+    URL and OAuth Client ID".
+  evidence: https://help.logixboard.com/en/articles/15888871-cargowise-eadaptor-next-migration
+- name: eAdaptor outbound Basic (BAU)
+  type: http
+  scheme: basic
+  description: EDI Client Outbound tab "Authorization Type to BAU (Basic Authentication)" with the receiving endpoint, username and password.
+  evidence: https://help.logixboard.com/en/articles/15888871-cargowise-eadaptor-next-migration
+- name: eAdaptor inbound username/password
+  type: http
+  scheme: basic
+  description: Integrators request the inbound eAdapter username, password and URL plus Enterprise ID, Company Code and Server ID.
+  evidence: https://docs.bravotran.com/Full-Setup-ec68b67e7ac942a7a3cd3231d9d2ac56

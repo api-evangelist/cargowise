@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Contact: mailto:csirt@wisetechglobal.com
+Expires: 2026-11-27T22:45:39z
+Preferred-Languages: en
+Canonical: https://myaccount.cargowise.com/.well-known/security.txt
+Hiring: https://www.wisetechglobal.com/careers/current-openings/
+-----BEGIN PGP SIGNATURE-----
+
+iHUEARYKAB0WIQTqk0ng3hWGEeC2ldr3M5BpihQl/gUCahjFkwAKCRD3M5BpihQl
+/kq8AP9ikZftW0MT3dR6PjbJzDBQaO0o3DoxdAaHh1gYStL25AD9H+UWpyF8JW7c
+jTEDgx1EyWzZ9HfLSCXa2mp5Tg1Dogc=
+=CHB6
+-----END PGP SIGNATURE-----

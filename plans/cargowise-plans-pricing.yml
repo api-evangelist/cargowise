@@ -1,0 +1,213 @@
+name: CargoWise pricing
+generated: '2026-10-20'
+method: searched
+source: https://www.cargowise.com/cargowise-value-pack/cargowise-value-pack-community-pricing/
+audience: business-product
+pricing_basis: usage-other
+published: true
+delivery:
+  delivery: managed+licensed
+  evidence: CargoWise Cloud Base, Customer Hosted (Production/Non-Production) Minimum Fee - Per Private Cloud Instance
+  managed_tier: CargoWise Cloud
+note: 'CargoWise Value Pack "Community Pricing": per-transaction list prices (USD) for the CargoWise product; eAdaptor/API access is not priced separately on this page. "Customer Specific URL (including
+  https) For Web Services etc." is the line item closest to integration hosting. Selected rows copied verbatim; see source for the full table and footnotes.'
+plan_count: 25
+plans:
+- name: Forwarding Value Pack - Gateway/Transit/Transfer/CrossTrade/Wholesaler/Coload Master to Forwarder Shipment FCL/FTL
+  description: 'Charge basis: Per shipment. List Price (USD).'
+  price: 3.95
+  price_text: $3.95
+  currency: USD
+  billing_period: Per shipment
+  features: []
+  limits: []
+- name: Forwarding Value Pack - Gateway/Transit/Transfer/CrossTrade/Wholesaler/Coload Master to Forwarder Shipment LCL/LTL/AIR/NON-FCL
+  description: 'Charge basis: Per shipment. List Price (USD).'
+  price: 2.63
+  price_text: $2.63
+  currency: USD
+  billing_period: Per shipment
+  features: []
+  limits: []
+- name: Forwarding Value Pack - Export Shipment FCL/FTL
+  description: 'Charge basis: Per shipment. List Price (USD).'
+  price: 12.75
+  price_text: $12.75
+  currency: USD
+  billing_period: Per shipment
+  features: []
+  limits: []
+- name: Forwarding Value Pack - Export Shipment LCL/LTL/AIR/NON-FCL
+  description: 'Charge basis: Per shipment. List Price (USD).'
+  price: 8.35
+  price_text: $8.35
+  currency: USD
+  billing_period: Per shipment
+  features: []
+  limits: []
+- name: Forwarding Value Pack - Import Shipment FCL/FTL
+  description: 'Charge basis: Per shipment. List Price (USD).'
+  price: 19.95
+  price_text: $19.95
+  currency: USD
+  billing_period: Per shipment
+  features: []
+  limits: []
+- name: Forwarding Value Pack - Import Shipment LCL/LTL/AIR/NON-FCL
+  description: 'Charge basis: Per shipment. List Price (USD).'
+  price: 13.3
+  price_text: $13.30
+  currency: USD
+  billing_period: Per shipment
+  features: []
+  limits: []
+- name: Customs Value Pack - Export, Land Border, EMCS Procedures, Miscellaneous/ Core Customs
+  description: 'Charge basis: Per Formal Procedure. List Price (USD).'
+  price: 3.28
+  price_text: $3.28
+  currency: USD
+  billing_period: Per Formal Procedure
+  features: []
+  limits: []
+- name: Customs Value Pack - Import, Inwards Duty Deferral/FTZ, Drawback Procedures
+  description: 'Charge basis: Per Formal Procedure. List Price (USD).'
+  price: 9.95
+  price_text: $9.95
+  currency: USD
+  billing_period: Per Formal Procedure
+  features: []
+  limits: []
+- name: Contract Warehouse Manager Value Pack - eCommerce Pick and Pack Order Line
+  description: 'Charge basis: Per eCommerce Order Line. List Price (USD).'
+  price: 0.45
+  price_text: $0.45
+  currency: USD
+  billing_period: Per eCommerce Order Line
+  features: []
+  limits: []
+- name: Contract Warehouse Manager Value Pack - Standard Warehouse Pick and Pack Order Line
+  description: 'Charge basis: Per Standard Warehouse Order Line. List Price (USD).'
+  price: 0.95
+  price_text: $0.95
+  currency: USD
+  billing_period: Per Standard Warehouse Order Line
+  features: []
+  limits: []
+- name: Contract Warehouse Manager Value Pack - Bill of Materials
+  description: 'Charge basis: Per Work Order/BOM/Kitting Request. List Price (USD).'
+  price: 4.95
+  price_text: $4.95
+  currency: USD
+  billing_period: Per Work Order/BOM/Kitting Request
+  features: []
+  limits: []
+- name: Transit Warehouse Value Pack - Stand-Alone
+  description: 'Charge basis: Per Package Per Warehouse. List Price (USD).'
+  price: 0.28
+  price_text: $0.28
+  currency: USD
+  billing_period: Per Package Per Warehouse
+  features: []
+  limits: []
+- name: Land Transport and Stand-Alone Transport Booking Value Pack - Containerized
+  description: 'Charge basis: Per Container. List Price (USD).'
+  price: 1.95
+  price_text: $1.95
+  currency: USD
+  billing_period: Per Container
+  features: []
+  limits: []
+- name: Land Transport and Stand-Alone Transport Booking Value Pack - LTL/General Freight
+  description: 'Charge basis: Per Consignment. List Price (USD).'
+  price: 1.45
+  price_text: $1.45
+  currency: USD
+  billing_period: Per Consignment
+  features: []
+  limits: []
+- name: eCommerce Value Pack - eCommerce Clearances of High Volume/ Low Value Packages
+  description: 'Charge basis: Per Package. List Price (USD).'
+  price: 0.2
+  price_text: $0.20
+  currency: USD
+  billing_period: Per Package
+  features: []
+  limits: []
+- name: Liner and Agency Value Pack - Booking/ Bill of Lading
+  description: 'Charge basis: Per Booking/ Bill of Lading. List Price (USD).'
+  price: 9.95
+  price_text: $9.95
+  currency: USD
+  billing_period: Per Booking/ Bill of Lading
+  features: []
+  limits: []
+- name: Container Freight Station Value Pack - Container Pack or Container Unpack
+  description: 'Charge basis: Per Container Pack/ Unpack. List Price (USD).'
+  price: 9.95
+  price_text: $9.95
+  currency: USD
+  billing_period: Per Container Pack/ Unpack
+  features: []
+  limits: []
+- name: Container Transport Optimizations (CTO) Booking
+  description: 'Charge basis: Per CTO Booked Container. List Price (USD).'
+  price: 9.95
+  price_text: $9.95
+  currency: USD
+  billing_period: Per CTO Booked Container
+  features: []
+  limits: []
+- name: Gate, Yard and VBS Value Pack - Stand-Alone
+  description: 'Charge basis: Per Container Booking. List Price (USD).'
+  price: 0.4
+  price_text: $0.40
+  currency: USD
+  billing_period: Per Container Booking
+  features: []
+  limits: []
+- name: Optional - Customer Specific URL (including https) For Web Services etc.
+  description: 'Charge basis: Per Service Per Month. List Price (USD).'
+  price: 100.0
+  price_text: $100.00
+  currency: USD
+  billing_period: Per Service Per Month
+  features: []
+  limits: []
+- name: Optional - CargoWise Cloud Network Services - External Connections Secured Links/VPN/Dedicated Link
+  description: 'Charge basis: Per Service Per Month. List Price (USD).'
+  price: 200.0
+  price_text: $200.00
+  currency: USD
+  billing_period: Per Service Per Month
+  features: []
+  limits: []
+- name: Optional - CargoWise Cloud Read Only Access (Optional Service to allow direct SQL queries / customized reports etc.)
+  description: 'Charge basis: Per Service Per Month. List Price (USD).'
+  price: 2500.0
+  price_text: $2,500.00
+  currency: USD
+  billing_period: Per Service Per Month
+  features: []
+  limits: []
+- name: Optional - CargoWise Cloud Base, Customer Hosted Minimum Fee - Per Private Cloud Instance
+  description: 'Charge basis: Per Instance Per Month. List Price (USD).'
+  price: 250.0
+  price_text: $250.00
+  currency: USD
+  billing_period: Per Instance Per Month
+  features: []
+  limits: []
+- name: External Service - 1Stop Premium Stack Run API
+  description: 'Charge basis: Per Accepted Container. List Price (USD).'
+  price: 1.04
+  price_text: $1.04
+  currency: USD
+  billing_period: Per Accepted Container
+  features: []
+  limits: []
+- name: CargoWise FailOver Services For Self Hosted Customers
+  description: Optional service
+  price: POA
+  price_text: POA
+  features: []
+  limits: []

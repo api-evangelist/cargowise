@@ -1,7 +1,11 @@
 aid: cargowise
+
 url: https://raw.githubusercontent.com/api-evangelist/cargowise/refs/heads/main/apis.yml
+
 name: CargoWise
+
 kind: company
+
 description: >-
   CargoWise is WiseTech Global's logistics execution platform - a single-database
   ERP for international freight forwarding, customs, warehousing, transport, and
@@ -16,6 +20,7 @@ description: >-
   after a customer purchases the eAdaptor modules, and partner access runs through
   WiseTech accreditation and certification. Endpoints below are modeled from public
   developer references; the authoritative specification is not publicly published.
+
 deliveryModel:
   model: saas
   license_evidence:
@@ -31,6 +36,7 @@ deliveryModel:
   - repository-not-product
   generated: '2026-09-25'
   method: derived
+
 accessModel:
   pricing: unknown
   onboarding: unknown
@@ -42,7 +48,9 @@ accessModel:
   source: []
   generated: '2026-07-22'
   method: derived
+
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/cargowise.png
+
 tags:
 - Logistics
 - Freight Forwarding
@@ -53,9 +61,73 @@ tags:
 - Universal XML
 - EDI
 - WiseTech Global
+
 created: '2026-07-05'
-modified: '2026-10-06'
+
+modified: '2026-10-20'
+
 specificationVersion: '0.23'
+
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
+
+common:
+- type: Plans
+  url: plans/cargowise-plans-pricing.yml
+- type: Security
+  url: security/cargowise-vulnerability-disclosure.yml
+- type: Authentication
+  url: authentication/cargowise-authentication.yml
+- type: SecurityTxt
+  url: well-known/cargowise-www-security.txt
+- type: SecurityTxt
+  url: well-known/cargowise-security.txt
+- type: SecurityTxt
+  url: well-known/cargowise-myaccount-security.txt
+- type: SecurityTxt
+  url: well-known/cargowise-cargowise-security.txt
+- type: WellKnown
+  url: well-known/cargowise-well-known.yml
+- type: Hosts
+  url: hosts/cargowise-hosts.yml
+- type: IntegrationEdges
+  url: integrations/cargowise-integration-edges.yml
+- type: Vendors
+  url: vendors/cargowise-vendors.yml
+- type: Newsroom
+  url: https://www.cargowise.com/news/
+- url: https://www.cargowise.com/news/
+  type: Blog
+- type: VulnerabilityDisclosure
+  url: security/cargowise-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/cargowise-domain-security.yml
+- type: LinkedIn
+  url: https://www.linkedin.com/company/wisetech-global
+- type: Website
+  url: https://www.cargowise.com/
+- type: Documentation
+  url: https://wisetechacademy.com/explore/product-learning/
+- type: Partners
+  url: https://www.cargowise.com/partners/become-a-partner/
+- type: Pricing
+  url: https://www.cargowise.com/cargowise-value-pack/
+- type: Support
+  url: https://www.cargowise.com/support/
+- type: Contact
+  url: https://www.cargowise.com/contact/
+- type: Login
+  url: https://myaccount.cargowise.com/
+- type: TermsOfService
+  url: https://www.wisetechglobal.com/legal/terms-of-use/
+- type: PrivacyPolicy
+  url: https://www.wisetechglobal.com/legal/privacy-and-data-protection-notice/
+- type: GitHubOrganization
+  url: https://github.com/WiseTechGlobal
+- type: Company
+  url: https://www.wisetechglobal.com/
+
 apis:
 - aid: cargowise:cargowise-eadaptor-inbound-api
   name: CargoWise eAdaptor Inbound API
@@ -71,8 +143,8 @@ apis:
     a CargoWise (CW1) instance and querying records. A single inbound endpoint
     accepts a Universal XML or Native XML payload; the XML determines whether the
     request queries, adds, or updates records. Endpoints are per-tenant and gated
-    behind the eAdaptor module purchase, so paths below are modeled from public
-    developer references rather than a published specification.
+    behind the eAdaptor module purchase; CargoWise publishes no public
+    specification for it.
   properties:
   - url: https://wisetechacademy.com/explore/product-learning/
     type: Documentation
@@ -100,8 +172,8 @@ apis:
     Organization Proxy (ORP). The reference open-source client exposes the SOAP
     operations Ping, SendStream, and the deprecated ProcessStream against an
     eAdapterStreamedService.wsdl endpoint. Only one outbound SOAP URL can be
-    configured per CargoWise instance. Endpoints are modeled from public
-    references.
+    configured per CargoWise instance. CargoWise publishes no public WSDL or
+    specification; the operation names come from a third-party client.
   properties:
   - url: https://www.complect.io/docs/cargowise-integrations/cargowise-eadaptor/workflow-templates/
     type: Documentation
@@ -141,8 +213,8 @@ apis:
     event or milestone responsible for a notification - the basis for tracking and
     status integrations. XUE messages are emitted by the eAdaptor Outbound Service
     when a Workflow Template milestone completes, and can also be posted inbound to
-    raise events against a record. Endpoints are the shared eAdaptor services and
-    are modeled from public references.
+    raise events against a record. Endpoints are the shared eAdaptor services; no
+    public specification is published.
   properties:
   - url: https://www.complect.io/docs/cargowise-integrations/cargowise-eadaptor/workflow-templates/
     type: Documentation
@@ -167,29 +239,35 @@ apis:
     eAdaptor Next is positioned to fully replace SOAP for both inbound and outbound
     communication, adding traceability, multi-system support, and richer
     messaging. Access is partner-gated through WiseTech accreditation; no public
-    REST reference is published, so any resource paths are modeled.
+    REST reference is published.
   properties:
   - url: https://www.cargowise.com/partners/become-a-partner/
     type: Documentation
-common:
-- url: https://www.cargowise.com/news/
-  type: Blog
-- type: VulnerabilityDisclosure
-  url: security/cargowise-vulnerability-disclosure.yml
-- type: DomainSecurity
-  url: security/cargowise-domain-security.yml
-- type: LinkedIn
-  url: https://www.linkedin.com/company/wisetech-global
-- type: Website
-  url: https://www.cargowise.com/
-- type: Documentation
-  url: https://wisetechacademy.com/explore/product-learning/
-- type: Partners
-  url: https://www.cargowise.com/partners/become-a-partner/
-- type: Pricing
-  url: https://www.cargowise.com/lp/cargowise-value-pack/
-- type: Company
-  url: https://www.wisetechglobal.com/
-maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
+
+x-coverage:
+  state: covered
+  reason: identity-verified
+  detail: Website www.cargowise.com confirmed live (200, open front door); legal pages, support, login and GitHub org are WiseTech Global (parent) properties linked from the CargoWise site footer or naming WiseTech Global.
+  evidence:
+  - url: https://www.cargowise.com/
+    status: 200
+  - url: https://www.cargowise.com/support/
+    status: 200
+  - url: https://www.cargowise.com/contact/
+    status: 200
+  - url: https://www.cargowise.com/cargowise-value-pack/
+    status: 200
+  - url: https://myaccount.cargowise.com/
+    status: 200
+  - url: https://www.wisetechglobal.com/legal/terms-of-use/
+    status: 200
+  - url: https://www.wisetechglobal.com/legal/privacy-and-data-protection-notice/
+    status: 200
+  - url: https://github.com/WiseTechGlobal
+    status: 200
+x-enrichment:
+  date: '2026-10-20'
+  status: enriched
+  artifacts_added: 18
+  pass: modular-v1
+  engine: identity=anthropic,contract=anthropic,surfaces=anthropic,docs=anthropic,regulatory=anthropic

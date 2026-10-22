@@ -1,0 +1,117 @@
+generated: '2026-10-20'
+method: searched
+source:
+- https://www.wisetechglobal.com/legal/privacy-and-data-protection-notice/
+- https://www.wisetechglobal.com/legal/privacy-help-center/
+- https://www.wisetechglobal.com/legal/wisetech-global-group-subprocessors/
+- https://www.wisetechglobal.com/legal/dpa/
+- https://www.wisetechglobal.com/legal/saas-terms-v1-2/
+- https://www.wisetechglobal.com/legal/our-contracting-principles/
+note: >-
+  CargoWise is a WiseTech Global (WTG) product. The cargowise.com footer links its Privacy and Terms
+  to wisetechglobal.com/legal/, so the legal and trust pages here are the parent's, and they apply
+  across the group. The dossier had no legal_pages (null). Every page below was fetched with GET on
+  2026-10-20 and returned 200.
+signals:
+  data_subject_request:
+    url: https://www.wisetechglobal.com/legal/privacy-and-data-protection-notice/
+    section: Your Rights As A Data Subject
+    note: The privacy notice grants GDPR access/copy rights (Section C), CCPA deletion rights (with retention carve-outs) and Australian APP access/correction rights.
+    evidence:
+    - source: https://www.wisetechglobal.com/legal/privacy-and-data-protection-notice/
+      http_status: 200
+      fetched: '2026-10-20'
+      quote: As a Data Subject, you have the right to obtain confirmation as to whether Personal Information relating to you is being processed by us and, where that is the case, the right to access the Personal Information and obtain a copy thereof (Art. 15(1) and (3) GDPR).
+    - source: https://www.wisetechglobal.com/legal/privacy-and-data-protection-notice/
+      http_status: 200
+      fetched: '2026-10-20'
+      quote: 'Right to Deletion: You have the right to request that we delete certain personal information about you that we have collected about you.'
+    - source: https://www.wisetechglobal.com/legal/privacy-and-data-protection-notice/
+      http_status: 200
+      fetched: '2026-10-20'
+      quote: You can access the personal information we hold about you by contacting us using the contact details in Section A.
+  subprocessors:
+    url: https://www.wisetechglobal.com/legal/wisetech-global-group-subprocessors/
+    section: Who are WiseTech’s subprocessors?
+    note: A public subprocessor list exists (external, internal, Bolero- and SISA-specific tables), and the DPA page offers email notification when the list changes.
+    evidence:
+    - source: https://www.wisetechglobal.com/legal/privacy-help-center/
+      http_status: 200
+      fetched: '2026-10-20'
+      quote: WiseTech engages subprocessors to assist in the processing of personal data. A current list of our subprocessors can be found on our sub processors page. This list may be updated from time to time.
+    - source: https://www.wisetechglobal.com/legal/dpa/
+      http_status: 200
+      fetched: '2026-10-20'
+      quote: If you want to be notified when we make material changes to our Data Processing Addendum (DPA), Technical and Organisational Measures (TOMs), or our list of subprocessors, you can subscribe to receive update notifications by email.
+  data_residency:
+    url: https://www.wisetechglobal.com/legal/wisetech-global-group-subprocessors/
+    section: Internal Subprocessors / data centres
+    note: >-
+      The subprocessor page lists data centres by region (US, EU and China for named services). It does
+      not offer customers a choice of region for CargoWise as a whole. International transfers rely on the
+      SCCs incorporated in the DPA. The privacy notice names AU/US/UK as the usual places it discloses
+      website personal information to.
+    evidence:
+    - source: https://www.wisetechglobal.com/legal/wisetech-global-group-subprocessors/
+      http_status: 200
+      fetched: '2026-10-20'
+      quote: Primary EU data center for certain services, primarily restricted party screening and trade automation
+    - source: https://www.wisetechglobal.com/legal/privacy-help-center/
+      http_status: 200
+      fetched: '2026-10-20'
+      quote: The DPA incorporates the model contractual clauses for the safeguarding of international data transfers (SCCs), where applicable.
+    - source: https://www.wisetechglobal.com/legal/privacy-and-data-protection-notice/
+      http_status: 200
+      fetched: '2026-10-20'
+      quote: in the course of our ordinary operations, we generally disclose personal information to organizations or persons located in Australia, the United States of America and the United Kingdom.
+  incident_notification:
+    url: https://www.wisetechglobal.com/legal/saas-terms-v1-2/
+    section: Privacy and data protection
+    note: The SaaS terms bind both parties to notify each other of a privacy breach, including unauthorised access to Personal Information. They set no deadline in hours.
+    evidence:
+    - source: https://www.wisetechglobal.com/legal/saas-terms-v1-2/
+      http_status: 200
+      fetched: '2026-10-20'
+      quote: immediately notify the other party upon becoming aware of or receiving a complaint relating to a breach of this clause 15, including but not limited to unauthorised access to Personal Information.
+  exit_assistance:
+    url: https://www.wisetechglobal.com/legal/saas-terms-v1-2/
+    section: Effect of termination
+    note: The customer is responsible for exporting its own data. WTG gives reasonable offboarding and export help, billed at hourly rates. The contracting principles add a right to terminate for convenience.
+    evidence:
+    - source: https://www.wisetechglobal.com/legal/saas-terms-v1-2/
+      http_status: 200
+      fetched: '2026-10-20'
+      quote: Customer is responsible and must make all necessary arrangements for exporting its data from the Software, including any data required to be retained in accordance with regulatory requirements. WTG will provide reasonable assistance with offboarding and data exports, charged to the Customer at WTG's usual hourly rates
+    - source: https://www.wisetechglobal.com/legal/our-contracting-principles/
+      http_status: 200
+      fetched: '2026-10-20'
+      quote: Outside of any agreed fixed term, you have an ongoing right to terminate for convenience.
+  ai_transparency:
+    url: https://www.wisetechglobal.com/legal/our-contracting-principles/
+    section: Data use and AI
+    note: >-
+      WTG says plainly that it uses application data for AI and service improvement, with safeguards (limited
+      purpose, anonymization). The SaaS terms also grant WTG a perpetual licence to use Customer Materials to
+      create Statistics. This is a disclosure of data use. It is not a model card or a summary of training data.
+    evidence:
+    - source: https://www.wisetechglobal.com/legal/our-contracting-principles/
+      http_status: 200
+      fetched: '2026-10-20'
+      quote: Our terms give us clear and transparent rights over application data that we use to improve our services and deliver cutting-edge functionality but with key safeguards on what customer data cannot be used, limited purpose and anonymization.
+    - source: https://www.wisetechglobal.com/legal/saas-terms-v1-2/
+      http_status: 200
+      fetched: '2026-10-20'
+      quote: Customer grants WTG and any WTG Affiliates a perpetual, irrevocable, worldwide, nonexclusive, transferable, sublicensable, royalty-free, fully paid-up license to use Customer Materials to create Statistics.
+  data_retention:
+    url: https://www.wisetechglobal.com/legal/wisetech-global-group-subprocessors/
+    section: External Subprocessors (Duration of processing)
+    note: Subprocessors process data for the term of the service agreement, until the customer databases are torn down. The privacy notice sets a 14-day erasure limit for job-applicant data once deletion is requested.
+    evidence:
+    - source: https://www.wisetechglobal.com/legal/wisetech-global-group-subprocessors/
+      http_status: 200
+      fetched: '2026-10-20'
+      quote: For the term of the applicable Service Agreement and until teardown of Data Exporter’s databases is complete
+    - source: https://www.wisetechglobal.com/legal/privacy-and-data-protection-notice/
+      http_status: 200
+      fetched: '2026-10-20'
+      quote: We will erase Personal Information from the application procedure no later than 14 days after this procedure has been requested.

@@ -1,0 +1,26 @@
+name: CargoWise MCP Server
+type: MCPServer
+generated: '2026-10-20'
+method: none
+status: absent
+description: >-
+  No official CargoWise / WiseTech Global MCP server was found. A web search for
+  a CargoWise MCP server turned up only unrelated products (getcargo.ai's "Cargo"
+  MCP server) and a third-party article calling CargoWise MCP use "speculative".
+  The WiseTechGlobal GitHub org has no repository matching "mcp". No candidate tool
+  list was derived, because the repo holds no OpenAPI contract to derive one from:
+  CargoWise's eAdaptor integration is XML/SOAP, gated per tenant, and has no public
+  specification.
+checked:
+- query: CargoWise MCP server Model Context Protocol
+  note: web search, standard mode; no official server found
+- url: https://api.github.com/search/repositories?q=org:WiseTechGlobal+mcp
+  status: 200
+  note: total_count 0
+- url: https://getguru.com/reference/cargowise-mcp
+  note: third-party article; says MCP for CargoWise remains speculative
+deployment:
+  mode: none
+  auth: unknown
+  verified: searched
+tools: []

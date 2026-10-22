@@ -1,0 +1,444 @@
+generated: '2026-10-20'
+method: searched
+source:
+- https://www.cargowise.com/partners/find-a-partner/
+- https://zapier.com/apps/cargowise/integrations
+- https://n8n.io/integrations/cargowise/
+- https://composio.dev/toolkits/cargowise
+- https://monid.ai/tools/cargowise
+checked:
+- https://www.cargowise.com/partners/find-a-partner/
+- https://www.cargowise.com/partners/become-a-partner/
+- https://www.npmjs.com/package/cargowise
+- https://www.nuget.org/packages/CargoWiseReplicationAPIInterface
+- https://composio.dev/toolkits/cargowise
+- https://monid.ai/tools/cargowise
+- https://n8n.io/integrations/cargowise/
+- https://zapier.com/apps/cargowise/integrations
+summary: null
+marketplace_apps: []
+edges:
+- partner_name: Shanghai MyCompass Enterprise Management Consulting Co., Ltd.
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/shanghai-mycompass-enterprise-management-consulting-co-ltd/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (gold competency tier).
+- partner_name: Calsoft Systems
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/calsoft-systems/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (gold competency tier).
+- partner_name: SCF Global Pte Ltd
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/scf-global-pte-ltd/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (platinum competency tier).
+- partner_name: CargoTech
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/cargotech/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (platinum competency tier).
+- partner_name: Applied Freight Solutions Inc
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/applied-freight-solutions-inc/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (platinum competency tier).
+- partner_name: Nomad Partners
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/nomad-partners/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (platinum competency tier).
+- partner_name: Cen Global
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/cen-global/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (platinum competency tier).
+- partner_name: Whirl IT Solutions
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/whirl-it-solutions/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (platinum competency tier).
+- partner_name: Infosys Limited
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/infosys-limited/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (certified competency tier).
+- partner_name: Southern Freight Consultants
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/southern-freight-consultants/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (gold competency tier).
+- partner_name: Harrisson Solution inc.
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/harrisson-solution-inc/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (platinum competency tier).
+- partner_name: LanciaConsult
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/lanciaconsult/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (certified competency tier).
+- partner_name: Zinnovate International
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/zinnovate-international/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (platinum competency tier).
+- partner_name: Chain.io
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/chainio/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (platinum competency tier).
+- partner_name: ISWISE
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/iswise/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (certified competency tier).
+- partner_name: Archilog
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/archilog/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (platinum competency tier).
+- partner_name: SilentBird Global (Private) Limited
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/silentbird-global-private-limited/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (certified competency tier).
+- partner_name: Banerasoft Inc.
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/banerasoft-inc/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (certified competency tier).
+- partner_name: Offshore Business Processing
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/offshore-business-processing/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (platinum competency tier).
+- partner_name: L.S. Advanced Software
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/ls-advanced-software/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (platinum competency tier).
+- partner_name: Paran IT Limited
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/paran-it-limited/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (certified competency tier).
+- partner_name: SOTO Consulting
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/soto-consulting/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (gold competency tier).
+- partner_name: Interlogic Global
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/interlogic-global/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (certified competency tier).
+- partner_name: LogicWiz
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/logicwiz/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (certified competency tier).
+- partner_name: iCargo Technology Co. Ltd
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/icargo-technology-co-ltd/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (certified competency tier).
+- partner_name: Active Freight Solutions
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/active-freight-solutions/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (certified competency tier).
+- partner_name: SFL Tech (Soft Freight Logic)
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/sfl-tech-soft-freight-logic/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (platinum competency tier).
+- partner_name: DIGILT
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/digilt/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (gold competency tier).
+- partner_name: Infologia Technologies
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/infologia-technologies/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (gold competency tier).
+- partner_name: DSYSINFO LLP
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/dsysinfo-llp/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (certified competency tier).
+- partner_name: Real-Info Pty Ltd
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/real-info-pty-ltd/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (platinum competency tier).
+- partner_name: Logsys
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/logsys/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (platinum competency tier).
+- partner_name: Coneksion
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/coneksion/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (certified competency tier).
+- partner_name: Logistics IT Solution
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/logistics-it-solution/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (gold competency tier).
+- partner_name: q.beyond logineer GmbH
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/qbeyond-logineer-gmbh/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (platinum competency tier).
+- partner_name: Innovalaciones
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/innovalaciones/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (platinum competency tier).
+- partner_name: Falcon Eye Solutions Pty Ltd
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/falcon-eye-solutions-pty-ltd/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (platinum competency tier).
+- partner_name: Knights Move Consulting
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/knights-move-consulting/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (certified competency tier).
+- partner_name: Digistics
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/digistics/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (gold competency tier).
+- partner_name: Sirma Jucari Global
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/sirma-jucari-global/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (platinum competency tier).
+- partner_name: Optimize Logistics Solutions
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/optimize-logistics-solutions/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (gold competency tier).
+- partner_name: Bleu Celeste Solutions
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/bleu-celeste-solutions/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (certified competency tier).
+- partner_name: AHS Consulting
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/ahs-consulting/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (platinum competency tier).
+- partner_name: Strenia Solutions
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/strenia-solutions/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (platinum competency tier).
+- partner_name: Amus Software SL
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/amus-software-sl/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (platinum competency tier).
+- partner_name: Elicit Technology Private Ltd
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/elicit-technology-private-ltd/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (platinum competency tier).
+- partner_name: Figmental Group Corp
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/figmental-group-corp/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (platinum competency tier).
+- partner_name: ThoughtStorm Inc.
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/thoughtstorm-inc/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (certified competency tier).
+- partner_name: eDatapings Business Analytics
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/edatapings-business-analytics/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (gold competency tier).
+- partner_name: Rosebank Professional
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/rosebank-professional/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (certified competency tier).
+- partner_name: Experts Coding SL
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/experts-coding-sl/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (gold competency tier).
+- partner_name: Integrity Matters
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/integrity-matters/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (platinum competency tier).
+- partner_name: SummitEdge
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/summitedge/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (platinum competency tier).
+- partner_name: EnkayTech
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/enkaytech/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (platinum competency tier).
+- partner_name: K&G Logistics Services
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/kg-logistics-services/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (platinum competency tier).
+- partner_name: Integrate Wise Co., LTD
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/integrate-wise-co-ltd/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (certified competency tier).
+- partner_name: Sharplighten Consulting Inc.
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/sharplighten-consulting-inc/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (certified competency tier).
+- partner_name: OneByOne
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/onebyone/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (certified competency tier).
+- partner_name: ToGather Solutions
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/togather-solutions/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (platinum competency tier).
+- partner_name: Logistic Lab
+  partner: null
+  type: claimed
+  direction: partner-built
+  relationship: connector-listing
+  evidence: https://www.cargowise.com/partners/find-a-partner/logistic-lab/
+  note: Listed in the CargoWise partner directory with area of expertise "integration" (platinum competency tier).
+templates: []
+note: Edges are the CargoWise Partner Program directory entries whose data-areas-of-expertise include "integration"
+  (60 of 267 listed partners); these are certified integration service/consulting partners, not app-store connectors.
+  No first-party CargoWise app was found on Zapier, Make, Workato or n8n by search.
