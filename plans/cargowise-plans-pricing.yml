@@ -211,3 +211,160 @@ plans:
   price_text: POA
   features: []
   limits: []
+x-canonical:
+  generated: '2026-10-23'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - subscription
+  units: []
+  plans:
+  - name: Forwarding Value Pack - Gateway/Transit/Transfer/CrossTrade/Wholesaler/Coload Ma
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: Forwarding Value Pack - Gateway/Transit/Transfer/CrossTrade/Wholesaler/Coload Ma
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: Forwarding Value Pack - Export Shipment FCL/FTL
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: Forwarding Value Pack - Export Shipment LCL/LTL/AIR/NON-FCL
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: Forwarding Value Pack - Import Shipment FCL/FTL
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: Forwarding Value Pack - Import Shipment LCL/LTL/AIR/NON-FCL
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: Customs Value Pack - Export, Land Border, EMCS Procedures, Miscellaneous/ Core C
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: Customs Value Pack - Import, Inwards Duty Deferral/FTZ, Drawback Procedures
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: Contract Warehouse Manager Value Pack - eCommerce Pick and Pack Order Line
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: Contract Warehouse Manager Value Pack - Standard Warehouse Pick and Pack Order L
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: Contract Warehouse Manager Value Pack - Bill of Materials
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: Transit Warehouse Value Pack - Stand-Alone
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: Land Transport and Stand-Alone Transport Booking Value Pack - Containerized
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: Land Transport and Stand-Alone Transport Booking Value Pack - LTL/General Freigh
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: eCommerce Value Pack - eCommerce Clearances of High Volume/ Low Value Packages
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: Liner and Agency Value Pack - Booking/ Bill of Lading
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: Container Freight Station Value Pack - Container Pack or Container Unpack
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: Container Transport Optimizations (CTO) Booking
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: Gate, Yard and VBS Value Pack - Stand-Alone
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: Optional - Customer Specific URL (including https) For Web Services etc.
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: Optional - CargoWise Cloud Network Services - External Connections Secured Links
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: Optional - CargoWise Cloud Read Only Access (Optional Service to allow direct SQ
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: Optional - CargoWise Cloud Base, Customer Hosted Minimum Fee - Per Private Cloud
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: External Service - 1Stop Premium Stack Run API
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: CargoWise FailOver Services For Self Hosted Customers
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
