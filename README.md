@@ -1,0 +1,143 @@
+# CargoWise (cargowise)
+
+<!-- API-EVANGELIST-PROVENANCE:BEGIN -->
+> ### About this repository
+>
+> **This is not our API.** This repository is an independent, third-party profile of a company's
+> **publicly available** API surface, maintained by [API Evangelist](https://apievangelist.com).
+> API Evangelist does not operate, host, resell, or support this company's APIs, and is not
+> affiliated with or endorsed by the company unless stated on the profile.
+>
+> **Where the information came from.** Everything here is assembled from material a member of the
+> public can reach with a browser and no credentials — the company's own website, developer portal
+> and documentation, the specifications it publishes for public use (OpenAPI, AsyncAPI, JSON Schema,
+> `apis.json`, `llms.txt` and similar), its public repositories, and its public status, pricing and
+> changelog pages. **Nothing here is obtained by breaching a system, defeating an access control, or
+> using credentials of any kind.**
+>
+> **The rating is an independent assessment.** The Kin Score and Agent Readiness rating are
+> independently calculated scores of a company's *public* API artifacts, produced by API Evangelist
+> against a published rubric. They are not certifications, endorsements, security assessments, or
+> audits, and they score published artifacts — not the quality, safety, or security of the software.
+>
+> **Corrections, re-scores, and removal are free.** No partnership, contract, or purchase is
+> required, and you do not need to justify the request.
+>
+> - **Something wrong?** Open an issue on this repository, or email
+>   [info@apievangelist.com](mailto:info@apievangelist.com).
+> - **Published something new?** Ask for a re-score and we will re-run the rating.
+> - **Want the listing taken down?** Say so and we will honor it. The profile is reduced to your
+>   company name, a factual description, and a link to your own site, and the company is recorded as
+>   **unrated** — never scored zero for having asked.
+>
+> **Response times.** Acknowledgement within **one business day**; removal or restriction within
+> **two business days**; corrections and re-scores within **five business days**.
+>
+> **Not from the company, and here with a question?** You are welcome here — we would rather be the
+> front line and point you the right way than have a good report go nowhere. What this repository
+> can answer is narrow, though, so it is worth knowing who you are actually looking for:
+>
+> - **A question about how the API works, an account, billing, or a bug in the service** — that is
+>   the company's own support, not us. We profile this API; we do not operate it and cannot see
+>   your account.
+> - **A bug in an open-source project we only catalog** — file it on that project's own repository.
+>   This has happened with a real and correct bug report that reached us instead of the people who
+>   could fix it, which helped nobody.
+> - **Anything about this listing itself** — the description, the tags, the rating, a missing or
+>   wrong artifact — is ours. Open an issue here.
+> - **Not sure, or something general about API Evangelist or APIs.io** — open an issue on the
+>   [APIs.io Inbox](https://github.com/api-search/inbox) and we will route it.
+>
+> **This repository contains no software, and we will never ask you to download anything.** There is
+> no build, release, installer, or binary here — only text and machine-readable API descriptions, so
+> there is nothing here that can be "corrupt" or need "repairing". Any issue, comment, or email
+> claiming otherwise and offering a download link is not from us and is hostile. Do not follow the
+> link; it is a lure. Report it to GitHub and, if you like, tell us at
+> [info@apievangelist.com](mailto:info@apievangelist.com) so we can take it down.
+>
+> **On a security or compliance team?** Email
+> [info@apievangelist.com](mailto:info@apievangelist.com) with *security* in the subject line and
+> you will get a person, not a form. We will tell you exactly which public URLs this profile was
+> built from so your team can see the same surface we did, and we will take the listing down on
+> request while you work through it.
+>
+> Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
+<!-- API-EVANGELIST-PROVENANCE:END -->
+
+CargoWise is WiseTech Global's logistics execution platform - a single-database ERP for international freight forwarding, customs, warehousing, transport, and landside logistics. Its integration surface is real but **heavily gated**. Data moves in and out of a CargoWise (CW1) instance primarily through **eAdaptor**, which pairs a RESTful XML **inbound** service (push, query, add, and update records) with a SOAP-based **outbound** service (a webhook equivalent that emits messages when Workflow Template milestones fire). Payloads use CargoWise's **Universal XML** schemas - Universal Shipment (XUS), Universal Event (XUE), and Universal Transaction - or the legacy **Native XML** format, wrapped in a `UniversalInterchange` envelope. A newer REST path (**eAdaptor Next / xHub**) adds OAuth 2.0 authorization-code access and is positioned to replace SOAP.
+
+**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/cargowise/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/cargowise/refs/heads/main/apis.yml)
+
+## Access Model (read this first)
+
+CargoWise's integration API is **not open or self-serve**:
+
+- The **eAdaptor Developers Guide** and the actual per-tenant endpoints are released only **after a customer purchases the eAdaptor modules** for their instance.
+- Integrator/partner access runs through **WiseTech accreditation and certification** (see the [Become a Partner](https://www.cargowise.com/partners/become-a-partner/) path).
+- There is **no public API reference, sandbox, or price list**. Behavior can differ between instances based on each client's configuration.
+- Pricing is **transaction-based** (Value Packs) with core API/EDI bundled into per-transaction fees; enterprise cost is **contact-sales**.
+
+Because the authoritative specification is gated, the APIs documented here are **modeled from public developer references** (open-source eAdaptor clients, integrator docs, and product sheets) - not from a published CargoWise specification. Concrete, publicly attested facts include the SOAP operations `Ping` / `SendStream` / `ProcessStream` (deprecated) on an `eAdapterStreamedService.wsdl` endpoint, the `XUS`/`XUE` action codes, the `ORP` (Organization Proxy) recipient, and the Universal vs Native XML formats. Endpoints are marked `endpointsModeled` in `review.yml`.
+
+## Tags
+
+- Logistics
+- Freight Forwarding
+- Supply Chain
+- Customs
+- Shipping
+- eAdaptor
+- Universal XML
+- EDI
+- WiseTech Global
+
+## Timestamps
+
+- **Created:** 2026-07-05
+- **Modified:** 2026-07-05
+
+## APIs
+
+### CargoWise eAdaptor Inbound API
+
+The eAdaptor Inbound Service is a RESTful XML interface for pushing data into a CargoWise instance and querying records. A single inbound endpoint accepts a Universal XML or Native XML payload; the XML determines whether the request queries, adds, or updates records. Endpoints are per-tenant and gated behind the eAdaptor module purchase.
+
+- **Human URL:** [https://wisetechacademy.com/explore/product-learning/](https://wisetechacademy.com/explore/product-learning/)
+
+### CargoWise eAdaptor Outbound API
+
+The eAdaptor Outbound Service is the webhook equivalent - CargoWise emits messages to a listening SOAP service when configured Workflow Template milestones or triggers fire. Actions are set to `XUS` (full Universal Shipment detail) or `XUE` (minimal Universal Event detail) with the recipient set to the Organization Proxy (`ORP`). The reference open-source client exposes the SOAP operations `Ping`, `SendStream`, and the deprecated `ProcessStream` against an `eAdapterStreamedService.wsdl` endpoint. Only one outbound SOAP URL can be configured per instance.
+
+- **Human URL:** [https://wisetechacademy.com/explore/product-learning/](https://wisetechacademy.com/explore/product-learning/)
+
+### CargoWise Universal Shipment API
+
+The Universal Shipment (`XUS`) message is CargoWise's canonical XML model for a full logistics record - forwarding shipment, customs declaration, warehouse order, transport leg, and the associated organizations, packing lines, and charges. It is carried over eAdaptor inbound (to create or update) and outbound (to notify), wrapped in a `UniversalInterchange` envelope.
+
+- **Human URL:** [https://www.scribd.com/document/725844283/Universal-XML-Universal-Activity-Module-Mapping-Guide](https://www.scribd.com/document/725844283/Universal-XML-Universal-Activity-Module-Mapping-Guide)
+
+### CargoWise Universal Event API
+
+The Universal Event (`XUE`) message carries a minimal record identifier plus the event or milestone responsible for a notification - the basis for tracking and status integrations. XUE messages are emitted by the eAdaptor Outbound Service when a Workflow Template milestone completes, and can also be posted inbound to raise events against a record.
+
+- **Human URL:** [https://www.complect.io/docs/cargowise-integrations/cargowise-eadaptor/workflow-templates/](https://www.complect.io/docs/cargowise-integrations/cargowise-eadaptor/workflow-templates/)
+
+### CargoWise REST Integration API
+
+WiseTech's newer integration path (referred to as eAdaptor Next and xHub) adds REST access authenticated with OAuth 2.0 authorization-code flow, where a registered application receives a client ID and secret to mint access tokens. eAdaptor Next is positioned to fully replace SOAP for both inbound and outbound communication. Access is partner-gated through WiseTech accreditation; no public REST reference is published.
+
+- **Human URL:** [https://www.cargowise.com/partners/become-a-partner/](https://www.cargowise.com/partners/become-a-partner/)
+
+## Common Properties
+
+- [LinkedIn](https://www.linkedin.com/company/wisetech-global)
+- [Website](https://www.cargowise.com/)
+- [Documentation](https://wisetechacademy.com/explore/product-learning/)
+- [Partners](https://www.cargowise.com/partners/become-a-partner/)
+- [Pricing](https://www.cargowise.com/lp/cargowise-value-pack/)
+- [Company](https://www.wisetechglobal.com/)
+
+## Maintainers
+
+**FN:** Kin Lane
+**Email:** kin@apievangelist.com
