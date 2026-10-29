@@ -1,4 +1,4 @@
-# CargoWise (cargowise)
+# CargoWise
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,80 +64,108 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-CargoWise is WiseTech Global's logistics execution platform - a single-database ERP for international freight forwarding, customs, warehousing, transport, and landside logistics. Its integration surface is real but **heavily gated**. Data moves in and out of a CargoWise (CW1) instance primarily through **eAdaptor**, which pairs a RESTful XML **inbound** service (push, query, add, and update records) with a SOAP-based **outbound** service (a webhook equivalent that emits messages when Workflow Template milestones fire). Payloads use CargoWise's **Universal XML** schemas - Universal Shipment (XUS), Universal Event (XUE), and Universal Transaction - or the legacy **Native XML** format, wrapped in a `UniversalInterchange` envelope. A newer REST path (**eAdaptor Next / xHub**) adds OAuth 2.0 authorization-code access and is positioned to replace SOAP.
+CargoWise is WiseTech Global's logistics execution platform - a single-database ERP for international freight forwarding, customs, warehousing, transport, and landside logistics. Its integration surface is delivered primarily through eAdaptor, which pairs a RESTful XML inbound service (push, query, add, and update records) with a SOAP-based outbound service (a webhook equivalent that emits messages on milestones). Payloads use CargoWise's Universal XML schemas - Universal Shipment (XUS), Universal Event (XUE), and Universal Transaction - or the legacy Native XML format. Newer REST integration (eAdaptor Next / xHub) adds OAuth 2.0 authorization-code access. The integration API is real but heavily gated - the eAdaptor Developers Guide and endpoint details are released only after a customer purchases the eAdaptor modules, and partner access runs through WiseTech accreditation and certification. Endpoints below are modeled from public developer references; the authoritative specification is not publicly published.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/cargowise/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/cargowise/refs/heads/main/apis.yml)
+**Areas:** Logistics · Freight Forwarding · Supply Chain · Customs · Shipping · eAdaptor · Universal XML · EDI · WiseTech Global
 
-## Access Model (read this first)
+## CargoWise on APIs.io
 
-CargoWise's integration API is **not open or self-serve**:
+Everything profiled for CargoWise is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/cargowise/](https://apis.io/providers/cargowise/)** — or go straight to one of the APIs or properties below.
 
-- The **eAdaptor Developers Guide** and the actual per-tenant endpoints are released only **after a customer purchases the eAdaptor modules** for their instance.
-- Integrator/partner access runs through **WiseTech accreditation and certification** (see the [Become a Partner](https://www.cargowise.com/partners/become-a-partner/) path).
-- There is **no public API reference, sandbox, or price list**. Behavior can differ between instances based on each client's configuration.
-- Pricing is **transaction-based** (Value Packs) with core API/EDI bundled into per-transaction fees; enterprise cost is **contact-sales**.
+### APIs (5)
 
-Because the authoritative specification is gated, the APIs documented here are **modeled from public developer references** (open-source eAdaptor clients, integrator docs, and product sheets) - not from a published CargoWise specification. Concrete, publicly attested facts include the SOAP operations `Ping` / `SendStream` / `ProcessStream` (deprecated) on an `eAdapterStreamedService.wsdl` endpoint, the `XUS`/`XUE` action codes, the `ORP` (Organization Proxy) recipient, and the Universal vs Native XML formats. Endpoints are marked `endpointsModeled` in `review.yml`.
+- [CargoWise eAdaptor Inbound API](https://apis.io/apis/cargowise/cargowise-eadaptor-inbound-api/) — The eAdaptor Inbound Service is a RESTful XML interface for pushing data into a CargoWise (CW1) instance and querying records. A single inbound endpoint…
+- [CargoWise eAdaptor Outbound API](https://apis.io/apis/cargowise/cargowise-eadaptor-outbound-api/) — The eAdaptor Outbound Service is the webhook equivalent - CargoWise emits messages to a listening SOAP service when configured Workflow Template milestones…
+- [CargoWise Universal Shipment API](https://apis.io/apis/cargowise/cargowise-universal-shipment-api/) — The Universal Shipment (XUS) message is CargoWise's canonical XML model for a full logistics record - forwarding shipment, customs declaration, warehouse…
+- [CargoWise Universal Event API](https://apis.io/apis/cargowise/cargowise-universal-event-api/) — The Universal Event (XUE) message carries a minimal record identifier plus the event or milestone responsible for a notification - the basis for tracking…
+- [CargoWise REST Integration API](https://apis.io/apis/cargowise/cargowise-rest-integration-api/) — WiseTech's newer integration path (referred to as eAdaptor Next and xHub) adds REST access authenticated with OAuth 2.0 authorization-code flow, where a…
 
-## Tags
+### Published properties
 
-- Logistics
-- Freight Forwarding
-- Supply Chain
-- Customs
-- Shipping
-- eAdaptor
-- Universal XML
-- EDI
-- WiseTech Global
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Timestamps
+#### Security (3)
 
-- **Created:** 2026-07-05
-- **Modified:** 2026-07-05
+Authentication, trust centre, and vulnerability disclosure.
 
-## APIs
+- [Cargowise Authentication](https://apis.io/security/cargowise/cargowise-authentication/)
+- [Cargowise Domain Security](https://apis.io/security/cargowise/cargowise-domain-security/)
+- [Cargowise Vulnerability Disclosure](https://apis.io/security/cargowise/cargowise-vulnerability-disclosure/)
 
-### CargoWise eAdaptor Inbound API
+#### Plans and pricing (1)
 
-The eAdaptor Inbound Service is a RESTful XML interface for pushing data into a CargoWise instance and querying records. A single inbound endpoint accepts a Universal XML or Native XML payload; the XML determines whether the request queries, adds, or updates records. Endpoints are per-tenant and gated behind the eAdaptor module purchase.
+Published plans, tiers and prices.
 
-- **Human URL:** [https://wisetechacademy.com/explore/product-learning/](https://wisetechacademy.com/explore/product-learning/)
+- [Cargowise Plans Pricing](https://apis.io/plans/cargowise/cargowise-plans-pricing/)
 
-### CargoWise eAdaptor Outbound API
+#### Rate limits (1)
 
-The eAdaptor Outbound Service is the webhook equivalent - CargoWise emits messages to a listening SOAP service when configured Workflow Template milestones or triggers fire. Actions are set to `XUS` (full Universal Shipment detail) or `XUE` (minimal Universal Event detail) with the recipient set to the Organization Proxy (`ORP`). The reference open-source client exposes the SOAP operations `Ping`, `SendStream`, and the deprecated `ProcessStream` against an `eAdapterStreamedService.wsdl` endpoint. Only one outbound SOAP URL can be configured per instance.
+Published request limits.
 
-- **Human URL:** [https://wisetechacademy.com/explore/product-learning/](https://wisetechacademy.com/explore/product-learning/)
+- [Cargowise Rate Limits](https://apis.io/rate-limits/cargowise/cargowise-rate-limits/)
 
-### CargoWise Universal Shipment API
+## Where to find this API
 
-The Universal Shipment (`XUS`) message is CargoWise's canonical XML model for a full logistics record - forwarding shipment, customs declaration, warehouse order, transport leg, and the associated organizations, packing lines, and charges. It is carried over eAdaptor inbound (to create or update) and outbound (to notify), wrapped in a `UniversalInterchange` envelope.
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-- **Human URL:** [https://www.scribd.com/document/725844283/Universal-XML-Universal-Activity-Module-Mapping-Guide](https://www.scribd.com/document/725844283/Universal-XML-Universal-Activity-Module-Mapping-Guide)
-
-### CargoWise Universal Event API
-
-The Universal Event (`XUE`) message carries a minimal record identifier plus the event or milestone responsible for a notification - the basis for tracking and status integrations. XUE messages are emitted by the eAdaptor Outbound Service when a Workflow Template milestone completes, and can also be posted inbound to raise events against a record.
-
-- **Human URL:** [https://www.complect.io/docs/cargowise-integrations/cargowise-eadaptor/workflow-templates/](https://www.complect.io/docs/cargowise-integrations/cargowise-eadaptor/workflow-templates/)
-
-### CargoWise REST Integration API
-
-WiseTech's newer integration path (referred to as eAdaptor Next and xHub) adds REST access authenticated with OAuth 2.0 authorization-code flow, where a registered application receives a client ID and secret to mint access tokens. eAdaptor Next is positioned to fully replace SOAP for both inbound and outbound communication. Access is partner-gated through WiseTech accreditation; no public REST reference is published.
-
-- **Human URL:** [https://www.cargowise.com/partners/become-a-partner/](https://www.cargowise.com/partners/become-a-partner/)
-
-## Common Properties
-
-- [LinkedIn](https://www.linkedin.com/company/wisetech-global)
 - [Website](https://www.cargowise.com/)
 - [Documentation](https://wisetechacademy.com/explore/product-learning/)
-- [Partners](https://www.cargowise.com/partners/become-a-partner/)
-- [Pricing](https://www.cargowise.com/lp/cargowise-value-pack/)
-- [Company](https://www.wisetechglobal.com/)
+- [Pricing](https://www.cargowise.com/cargowise-value-pack/)
+- [Support](https://www.cargowise.com/support/)
+- [Blog](https://www.cargowise.com/news/)
+- [Terms of service](https://www.wisetechglobal.com/legal/terms-of-use/)
+- [Privacy policy](https://www.wisetechglobal.com/legal/privacy-and-data-protection-notice/)
+- [GitHub](https://github.com/WiseTechGlobal)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 30.4** — thin · rubric 0.24.0 · scored 2026-10-20
+
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 15.8 |
+| Developer ergonomics | 28.6 |
+| Access clarity | 73.2 |
+
+**Agent readiness 16.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | documented (partial credit) |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 25.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/cargowise/](https://apis.io/providers/cargowise/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for CargoWise: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/cargowise/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
